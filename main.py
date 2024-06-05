@@ -1,7 +1,10 @@
 import math
+import os
 """
 Crie um programa onde o usuário decide qual equação ele deseja calcular: equação do 1º grau ou equancao do 2º grau
 """
+
+
 calcular_grau1 = lambda a, b: ((c-(b)) / a) 
 
 def calcular_grau2(a, b, c):
@@ -17,22 +20,22 @@ def calcular_grau2(a, b, c):
         resultado2 = (-(b) - math.sqrt(delta)) / (2 * a)
         yield resultado2
 
-
+os.system('cls')
 eq = int(
     input("Qual equação vc deseja usar? [1 para 1º grau e 2 prar 2º grau]"))
+os.system('cls')
 a = float(input("Informe o valor de A: "))
+os.system('cls')
 b = float(input("informe o valor de B: "))
+os.system('cls')
 c = float(input("infomr o valor de C: "))
+os.system('cls')
 if eq == 1:
     print(calcular_grau1(a, b))
 elif eq == 2:
     resultado = calcular_grau2(a, b ,c)
-    
     for item in resultado:
         print(f'resultado: {item}')
-
-
-    
 else:
     print("opção inexistente")
 
